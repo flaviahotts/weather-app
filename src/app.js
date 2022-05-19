@@ -43,8 +43,19 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].descripition);
 }
 
-let apiKey = "0fce278d35089ea0bca24d04fafbc6a0";
-let city = "Manchester";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "0fce278d35089ea0bca24d04fafbc6a0";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
 
-axios.get(apiUrl).then(displayTemperature);
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Manchester");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
