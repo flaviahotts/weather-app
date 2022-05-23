@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
@@ -24,7 +26,7 @@
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Type a city.."
+                  placeholder="Enter a city..."
                   class="form-control"
                   id="city-input"
                   autocomplete="off"
@@ -34,10 +36,8 @@
                 <input
                   type="submit"
                   value="Search"
-                  class="btn btn-primary w-100"
-                />
+                  class="btn btn-primary w-100"></div>
               </div>
-            </div>
           </form>
           <div class="overview">
             <h1 id="city"></h1>
@@ -52,9 +52,9 @@
                 <img src="" alt="Clear" id="icon" class="float-left" />
                 <div class="float-left">
                   <strong id="temperature"></strong
-                  ><span class="units"
+                  ><spam class="units"
                     ><a href="#" id="celsius-link" class="active">°C</a> |
-                    <a href="#" id="fahrenheit-link">°F</a></span
+                    <a href="#" id="fahrenheit-link">°F</a></spam
                   >
                 </div>
               </div>
@@ -62,26 +62,11 @@
             <div class="col-6">
               <ul>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span> km/h</li>
+                <li>Wind: <span id="wind"></span> m/h</li>
               </ul>
             </div>
           </div>
-          <div class="wheather-forecast">
-            <div class="row">
-              <div class="col-2">
-                <div class="wheather-forecast-date">Thu</div>
-                <img
-                  src="http://openweathermap.org/img/wn/04d@2x.png"
-                  alt=""
-                  widht="42"
-                />
-                <div class="wheather-forecast-temperatures">
-                  <span class="wheather-forecast-temperature-max"> 18° </span>
-                  <span class="wheather-forecast-temperature-min"> 12° </span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
         <small>
           <a
@@ -89,10 +74,10 @@
             target="_blank"
             >Open-source code</a
           >
-          by Matt Delac
+          by Flavia Hotts
         </small>
       </div>
     </div>
     <script src="src/app.js"></script>
   </body>
-</html>
+</html
